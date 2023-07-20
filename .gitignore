@@ -1,0 +1,13 @@
+//In the root directory of the project, create a .gitignore file with the following contents 
+so that Git doesn’t track any unwanted files
+
+node_modules
+/public
+_tmp/
+.DS_Store
+package-lock.json
+*git/
+.env
+
+# Local Netlify folder
+.netlify
