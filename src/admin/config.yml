@@ -13,24 +13,17 @@ local_backend: true
 # publish_mode: editorial_workflow
 
 collections:
-  - label: "Blog"
-    name: "blog"
-    folder: "src/posts"
+  - label: "Tarifs & Prestations"
+    name: "tarifs"
+    folder: "src/prestations"
     create: true
     editor:
       preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Titre", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Prix", name: "price", widget: "int" }
       - widget: select
-        label: "tags"
-        name: "tags"
-        multiple: true
-        create: true
-        options: ["Tags", "created", "from", "config.yml"]
   - label: "Paramètres"
     name: "parametres"
     editor:
