@@ -17,6 +17,7 @@ collections:
     name: "tarifs"
     folder: "src/prestations"
     create: true
+    delete: true
     editor:
       preview: false
     fields:
