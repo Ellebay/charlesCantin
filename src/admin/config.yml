@@ -13,18 +13,6 @@ local_backend: true
 # publish_mode: editorial_workflow
 
 collections:
-  - label: "Tarifs & Prestations"
-    name: "tarifs"
-    folder: "src/prestations"
-    create: true
-    delete: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Prix", name: "price", widget: "int" }
-      - widget: select
   - label: "Paramètres"
     name: "parametres"
     editor:
