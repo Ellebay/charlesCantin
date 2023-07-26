@@ -48,3 +48,15 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
+      - label: "Footer"
+        name: "items"
+        file: "src/_data/footer.yaml"
+        fields:
+          - label: Footer Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
