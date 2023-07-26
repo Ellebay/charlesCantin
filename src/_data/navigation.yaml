@@ -1,0 +1,10 @@
+---
+items:
+  - text: Accueil
+    url: "/accueil"
+  - text: Galerie
+    url: "/galerie"
+  - text: Tarifs & Prestations
+    url: "/tarifs"
+  - text: Contact
+    url: "/contact"
