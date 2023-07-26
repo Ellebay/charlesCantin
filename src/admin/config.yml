@@ -23,7 +23,7 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Prix", name: "price", widget: "string" }
+      - { label: "Prix", name: "price", widget: "number", value_type: "float", min: 1 }
   - label: "Paramètres"
     name: "parametres"
     editor:

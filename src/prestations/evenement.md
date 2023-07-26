@@ -1,5 +1,5 @@
 ---
 title: "J’immortalise l’événement"
-summary: "Prestation de mariage ou baptême sur devis."
+description: "Prestation de mariage ou baptême sur devis."
 price: "Sur mesure"
 ---
