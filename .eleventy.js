@@ -19,27 +19,18 @@ async function imageShortcode(src, alt, sizes) {
 }
 
 module.exports = function (eleventyConfig) {
-  /* tells Eleventy to pass the CSS file through to the final build. */
   eleventyConfig.addPassthroughCopy("./src/css/");
-
-  /*  tells the Eleventy dev server to watch the css directory and reload the site if the files in this directory change */
   eleventyConfig.addWatchTarget("./src/css/");
-
-  /* tells Eleventy to pass the image files through to the final build. */
   eleventyConfig.addPassthroughCopy("./src/images/");
-
-  /* tells Eleventy to pass the favicons files through to the final build. */
   eleventyConfig.addPassthroughCopy({ "./src/favicons": "/" });
-
-  /* outputs the current year so that the footer in our portfolio site is always up to date. */
-  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-
+  eleventyConfig.addPassthroughCopy("src/script.js")
   eleventyConfig.addNunjucksAsyncShortcode("EleventyImage", imageShortcode);
-
-  return {
-    dir: {
-      input: "src",
-      output: "public"
-    }
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+    return {
+      dir: {
+        input: "src",
+        output: "public"
+      }
+    };
   };
-};
+  

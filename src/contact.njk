@@ -2,24 +2,29 @@
 title: "Contact Charles Cantin"
 layout: "base.njk"
 ---
-
-<h2 class="heading--main text-center">Contactez-Moi</h2>
+<div class="container form-container">
+<h2 class="form-title text-center">Contactez-Moi</h2>
 <form class="form" name="contact" action="/success" method="POST" data-netlify="true">
-    <div class="form__section">
-        <label class="form__label" for="lastName">Nom</label>
-        <input class="form__input" name="lastName" type="text" id="lastName" required="true">
+  <div class="row">
+    <div class="col form__section">
+      <label class="form__label" for="lastName">Nom</label>
+      <input class="form__input" name="lastName" type="text" id="lastName" required="true">
     </div>
-    <div class="form__section">
-        <label class="form__label" for="firstName">Prénom</label>
-        <input class="form__input" name="firstName" type="text" id="firstName" required="true">
+    <div class="col form__section">
+      <label class="form__label" for="firstName">Prénom</label>
+      <input class="form__input" name="firstName" type="text" id="firstName" required="true">
     </div>
-    <div class="form__section">
-        <label class="form__label" for="email">Email</label>
-        <input class="form__input" name="email" type="email" id="email" required="true">
-    </div>
-    <div class="form__section">
-        <label class="form__label" for="message">Message</label>
-        <textarea class="form__input" name="message" id="message" rows="4" required="true"></textarea>
-    </div>
-    <button class="form__button" type="submit">Envoyer</button>
+  </div>
+  <div class="form__section">
+    <label class="form__label" for="email">Email</label>
+    <input class="form__input" name="email" type="email" id="email" required="true">
+  </div>
+  <div class="form__section">
+    <label class="form__label" for="message">Message</label>
+    <textarea class="form__input" name="message" id="message" rows="4" required="true"></textarea>
+  </div>
+  <button class="form__button" type="submit">Envoyer
+    <i class="fa-solid fa-arrow-right-long"></i>
+  </button>
 </form>
+</div>
