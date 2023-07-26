@@ -3,16 +3,28 @@
         <p class="p-0 m-0">&copy; Charles Cantin - {% year %}</p>
         <div>
             <ul class="d-flex gap-3 p-0 m-0">
-                <li class="nav-item"> <a class="nav-link" href="#"> <i class="bi bi-facebook"></i> </a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#"> <i class="bi bi-instagram"></i> </a> </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <div>
-            <ul class="p-0 m-0">
-                <li class="nav-item p-0 m-0">
-                    <a class="nav-link {{ 'active' if '/legal' in page.url }}" href="/legal">Mentions Légales</a>
-                </li>
-            </ul>
+            {% if footer.items %}
+                <ul class="p-0 m-0">
+                    {% for item in footer.items %}
+                        <li class="nav-item p-0 m-0">
+                            <a class="nav-link {{ 'active' if item.url in page.url }}" href="{{ item.url }}">{{ item.text }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
         </div>
     </div>
 </footer>
