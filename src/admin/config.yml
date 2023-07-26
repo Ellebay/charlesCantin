@@ -22,7 +22,7 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Prix", name: "price", widget: "int" }
+      - { label: "Prix", name: "price", widget: "string" }
       - widget: select
   - label: "Paramètres"
     name: "parametres"
