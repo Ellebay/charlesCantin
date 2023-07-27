@@ -1,8 +1,7 @@
----
-title: "Mes prestations"
-layout: "base.njk"
----
-
-<div class="prestation">
-  <h2 class="prestation__heading">{{ title }}</h2>
-</div>
+<section>
+      <div class="grid text-center prestation" style="--bs-columns: 3;">
+        {% for prestation in collections.prestations %}
+          {% include "prestation-card.njk" %}
+        {% endfor %}
+      </div>
+</section>

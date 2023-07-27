@@ -19,7 +19,7 @@ ol {
   list-style: none;
 }
 body {
-  min-height: 100vh;
+/*   min-height: 100vh; */
   display: flex;
   flex-direction: column; 
   background-color: var(--background) !important;
@@ -38,12 +38,12 @@ header, footer {
   color: var(--background)  !important;
 }
 
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-}
+} */
 
 .navbar-nav{
   gap: 2rem;
@@ -77,8 +77,8 @@ header, footer {
 
 /* footer style */
 footer {
-  position: fixed;
-  bottom: 0;
+/*   position: fixed; */
+/*   bottom: 0; */
   width: 100%;
   color: var(--background);
 }
@@ -117,7 +117,7 @@ footer {
   font-weight: 400;
   font-family: 'Nova Mono', monospace;
   color: var(--text);
-  padding-top: 7rem;
+/*   padding-top: 7rem; */
 }
 
 .form {
@@ -163,142 +163,82 @@ footer {
   background-color: var(--primary);
 }
 
-  /* Gallery */
-  .gallery-container {
-    padding-top: 9rem;
-  }
-  .filter-button
-  {
-    font-size: 1.125rem;
-      border: 2px solid var(--accent)  !important;
-      text-align: center;
-      color: var(--text) !important;
-      margin-bottom: 30px;
-      display: flex;
-      padding: 11.5625rem 50.5rem;
-      justify-content: center;
-      align-items: center;
-      gap: 3.125rem;
-      align-self: stretch;
-      border-radius: 62.4375rem !important;
-
-  }
-  .filter-button:hover
-  {
-      font-size: 18px;
-      border: 1px solid var(--accent) !important;
-      border-radius: 9999px;
-      text-align: center;
-      color: var(--background) !important;
-      background-color: var(--accent) !important ;
-  
-  }
-  .btn-default:active .filter-button:active
-  {
-      background-color: var(--accent) !important;
-      color: var(--background) !important;
-  }
-  
-  .gallery {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-    -webkit-column-width: 33%;
-    -moz-column-width: 33%;
-    column-width: 33%;
-  }
-  
-  .gallery .pics {
-    -webkit-transition: all 350ms ease;
-    transition: all 350ms ease;
-  }
-  
-  .gallery .animation {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-  
-  
-  @media (max-width: 450px) {
-    .gallery {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-      -webkit-column-width: 100%;
-      -moz-column-width: 100%;
-      column-width: 100%;
-    }
-  }
-  
-  @media (max-width: 400px) {
-    .btn.filter {
-      padding-left: 1.1rem;
-      padding-right: 1.1rem;
-    }
-  }
-
   /* -------- Prestations Style -------- */
-  .prestations {
-    margin: 6rem auto 4rem auto;
+  .prestation {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap to the next row */
+    margin: auto auto;
+    padding: 3.125rem 2.8125rem;
+    justify-content: space-between; /* Distribute cards evenly on the row */
   }
 
   hr.prestation__dashed {
-  border-width: 1px;
-  border-style: dashed;
-  color:var(--accent);
-  width: 100%;
-  height: 0.125rem;
-  }
+    border-width: 1px;
+    border-style: dashed;
+    color:var(--accent);
+    width: 100%;
+    height: 0.125rem;
+    }
     
-  .prestation__heading {
-    padding: 1rem 0;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--amber-600);
-  }
-  
-  .prestation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
   .prestation-card {
-    box-shadow: var(--box-shadow);
     background-color: var(--primary);
-    border-radius: 0.375rem;
-    overflow: hidden;
+    border-radius: 0.5rem;
+    flex: 0 0 calc(33% - 2rem); /* Set the width of each card to one-third of the container width minus some spacing */
+    margin-bottom: 1rem; /* Add some space between cards */
+    display: flex;
+    flex-direction: column; /* Stack the elements in each card vertically */
   }
   
   .prestation-card__body {
-    padding: 1rem;
-  }
-  
-  .prestation-card__title {
-    margin-bottom: 1rem;
-    font-size: 1.875rem;
-    font-weight: 400;
-    color: var(--background);
-    font-family: 'Nova Mono', monospace;    
-  }
-  
-  .prestation-card__button {
+    padding: 2rem;
+    flex-grow: 1; /* Allow the card body to grow and fill the remaining space in the card */
     display: flex;
-    padding: 0.75rem 1.25rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: 0.375rem;
-    color: var(--background);
-    background-color: var(--accent);
-    transition: background-color 0.3s ease;
-    font-family: 'DM Sans', sans-serif;
-    text-decoration: none;
-    text-align: center;
+    flex-direction: column; /* Stack the elements in each card body vertically */
   }
   
-  .prestation-card__button:hover {
+  /* Add a container for the description to limit its height */
+.prestation-card__description-container {
+  flex-grow: 1; /* Allow the description container to grow and fill the remaining space */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.prestation-card__description {
+  margin-bottom: 2rem;
+  text-align: left;
+  color: var(--background);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+}
+  
+.prestation-card__title {
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 1.625rem;
+  font-weight: 400;
+  color: var(--background);
+  font-family: 'Nova Mono', monospace;
+}
+
+.prestation-card__button {
+  display: flex;
+  justify-content: flex-start; /* Align the buttons at the top of the card */
+  align-items: center; /* Center the content vertically */
+}
+
+.prestation-card__button-booking {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.375rem;
+  color: var(--background);
+  background-color: var(--accent);
+  transition: background-color 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  text-align: center;
+}
+  
+  .prestation-card__button-booking:hover {
     background-color: var(--background);
     color: var(--accent);
   }
@@ -310,7 +250,6 @@ footer {
   }
   
   .prestation-card__tag {
-    display: flex;
     padding: 0.25rem 0.5rem;
     border-radius: 9999px;
     font-size: 0.75rem;
@@ -319,15 +258,63 @@ footer {
     font-family: 'Nova Mono', monospace;    
   }
   
-  .prestation-card__summary {
+  .prestation-card__description {
     margin-bottom: 2rem;
+    text-align: left;
     color: var(--background);
     font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
+    align-self: stretch;  
   }
-  
-  .prestation {
-    margin-bottom: 4rem;
-  }
+
+
+/* Gallery Style */
+
+.filter-button-container {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .filter-button {
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--accent);
+      border-radius: 9999px;
+      color: var(--text);
+      background-color: transparent;
+      font-family: 'Nova Mono', monospace;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .filter-button.active {
+      background-color: var(--accent);
+      color: var(--background)!important;
+    }  
+
+    
+.gallery-container {
+    min-height: 100vh;
+    margin: 2rem 3rem;
+}
+
+.gallery-img {
+  width: 20rem ;
+  height: 15rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

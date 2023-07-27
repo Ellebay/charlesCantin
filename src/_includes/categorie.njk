@@ -1,0 +1,48 @@
+
+<section class="filter-button-container">
+  <button class="filter-button active" data-filter="all">Toutes les photos</button>
+  <button class="filter-button" data-filter="mariage">Mariage</button>
+  <button class="filter-button" data-filter="bebe">Bébé</button>
+  <button class="filter-button" data-filter="grossesse">Grossesse</button>
+  <button class="filter-button" data-filter="famille">Famille</button>
+  <button class="filter-button" data-filter="bapteme">Baptême</button>
+  <button class="filter-button" data-filter="couple">Couple</button>
+</section>
+
+<div class="gallery-container">
+  <div class="row">
+    {% for category in collections.categories %}
+      {% include "categorie-card.njk" %}
+    {% endfor %}
+  </div>
+</div>
+  
+<script>
+  // Function to handle image filtering
+  function filterImages(category) {
+    const gallery = document.querySelectorAll('.category-images');
+    gallery.forEach((categoryImages) => {
+      const images = categoryImages.querySelectorAll('.pics');
+      if (category === 'all' || categoryImages.dataset.category === category) {
+        categoryImages.style.display = 'block';
+      } else {
+        categoryImages.style.display = 'none';
+      }
+    });
+  }
+  // Event listener for the filter buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.filter-button');
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const activeButton = document.querySelector('.filter-button.active');
+        if (activeButton) {
+          activeButton.classList.remove('active');
+        }
+        button.classList.add('active');
+        const category = button.getAttribute('data-filter');
+        filterImages(category);
+      });
+    });
+  });
+</script>
