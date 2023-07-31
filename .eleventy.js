@@ -4,7 +4,7 @@ const yaml = require("js-yaml");
 async function imageShortcode(src, alt, sizes) {
   let metadata = await Image(`./src${src}`, {
     widths: [300, 800, null],
-    formats: ["avif", "jpeg", "png"],
+    formats: ["png", "jpeg"],
     urlPath: "/images/",
     outputDir: "./public/images/"
   });
@@ -23,11 +23,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addPassthroughCopy("./src/images/");
-/*   eleventyConfig.addPassthroughCopy("./src/categories/"); */
   eleventyConfig.addPassthroughCopy({ "./src/favicons": "/" });
   eleventyConfig.addNunjucksAsyncShortcode("EleventyImage", imageShortcode);
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addPassthroughCopy({ "./src/admin/config.yml": "./admin/config.yml" });
+
 
   
   // To Support .yaml Extension in _data

@@ -1,4 +1,4 @@
-
+{# 
 <section class="filter-button-container">
   <button class="filter-button active" data-filter="all">Toutes les photos</button>
   <button class="filter-button" data-filter="mariage">Mariage</button>
@@ -22,14 +22,14 @@
   function filterImages(category) {
     const gallery = document.querySelectorAll('.category-images');
     gallery.forEach((categoryImages) => {
-      const images = categoryImages.querySelectorAll('.pics');
       if (category === 'all' || categoryImages.dataset.category === category) {
         categoryImages.style.display = 'block';
       } else {
-        categoryImages.style.display = 'none';
+        categoryImages.style.display = 'none'; // Hide the category div if not selected
       }
     });
   }
+
   // Event listener for the filter buttons
   document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.filter-button');
@@ -46,3 +46,4 @@
     });
   });
 </script>
+ #}
