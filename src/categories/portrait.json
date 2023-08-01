@@ -3,5 +3,5 @@
   "tags": "categories",
   "tag": "mariage",
   "title": "Mariage",
-  "images": ["image1.png", "image2.png", "image3.png", "image4.png"]
+  "images": ["/images/gallery/mariage/image1.png", "/images/gallery/mariage/image2.png", "/images/gallery/mariage/image3.png", "/images/gallery/mariage/image4.png"]
 }
