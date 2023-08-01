@@ -1,7 +1,0 @@
-{
-  "layout": "categorie.njk",
-  "tags": "categories",
-  "tag": "mariage",
-  "title": "Mariage",
-  "images": ["/images/gallery/mariage/image1.png", "/images/gallery/mariage/image2.png", "/images/gallery/mariage/image3.png", "/images/gallery/mariage/image4.png"]
-}
