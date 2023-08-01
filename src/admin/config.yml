@@ -21,7 +21,7 @@ collections:
     fields:
       - { label: "Catégorie", name: "categorie", widget: "string"}
       - { label: "Tag", name: "tag", widget: "string" }
-      - { label: "Images", name: "categorie", widget: "image", allow_multiple: "true", media_folder: "/images/gallery"}
+      - { label: "Images", name: "images", widget: "image", allow_multiple: true, media_folder: "/images/gallery"}
   - label: "Tarifs & Prestations"
     name: "tarifs"
     folder: "src/prestations"
