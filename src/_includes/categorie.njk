@@ -1,4 +1,4 @@
-{# <section class="filter-button-container">
+<section class="filter-button-container">
     <button class="filter-button active" type="button" data-filter="all" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Toutes les catégories
   </button>
@@ -23,62 +23,6 @@
       {% endfor %}
     </div>
   {% endfor %}
-</div>
-
-<script>
-  // Function to handle image filtering
-  function filterImages(category) {
-    const gallery = document.querySelectorAll('.category-images');
-    gallery.forEach((categoryImages) => {
-      if (category === 'all' || categoryImages.dataset.category === category) {
-        categoryImages.style.display = 'block';
-      } else {
-        categoryImages.style.display = 'none'; // Hide the category div if not selected
-      }
-    });
-  }
-
-  // Event listener for the filter buttons
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.filter-button');
-    buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const activeButton = document.querySelector('.filter-button.active');
-        if (activeButton) {
-          activeButton.classList.remove('active');
-        }
-        button.classList.add('active');
-        const category = button.getAttribute('data-filter');
-        filterImages(category);
-      });
-    });
-  });
-</script> #}
-
-<section class="filter-button-container">
-    <button class="filter-button active" type="button" data-filter="all" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Toutes les catégories
-  </button>
-
-  <div class="collapse" id="collapseExample">
-   {% for category in collections.categories %}
-    <button class="filter-button" data-filter="{{ category.data.tag }}">{{ category.data.tag|capitalize }}</button>
-  {% endfor %}
-</div>
-</section>
-
-<div class="gallery-container">
-  <div class="row">
-    {% for category in collections.categories %}
-      <div class="col-md-3 my-2 category-images" data-category="{{ category.data.tag }}">
-        {% for imagePath in category.data.images %}
-          <div class="item-content">
-            <img class="rounded gallery-img" src="{{ imagePath }}" alt="image">
-          </div>
-        {% endfor %}
-      </div>
-    {% endfor %}
-  </div>
 </div>
 
 <script>
