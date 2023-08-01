@@ -1,7 +1,6 @@
 ---
-title: Grossesse
+categorie: Grossesse
 tag: grossesse
-id: grossesse
 images:
     - /images/gallery/grossesse/image1.jpg
     - /images/gallery/grossesse/image2.jpg

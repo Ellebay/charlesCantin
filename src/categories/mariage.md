@@ -1,7 +1,6 @@
 ---
-title: Mariage
+categorie: Mariage
 tag: mariage
-id: mariage
 images:
     - /images/gallery/mariage/image1.jpg
     - /images/gallery/mariage/image2.jpg

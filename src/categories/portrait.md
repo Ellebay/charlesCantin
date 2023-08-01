@@ -1,7 +1,6 @@
 ---
-title: Portrait
+categorie: Portrait
 tag: portrait
-id: portrait
 images:
     - /images/gallery/portrait/image1.jpg
     - /images/gallery/portrait/image2.jpg

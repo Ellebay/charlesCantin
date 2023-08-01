@@ -1,7 +1,6 @@
 ---
-title: Bébé
+categorie: Bébé
 tag: bebe
-id: bebe
 images:
     - /images/gallery/bebe/image1.jpg
     - /images/gallery/bebe/image2.jpg

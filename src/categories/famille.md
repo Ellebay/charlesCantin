@@ -1,7 +1,6 @@
 ---
-title: Famille
+categorie: Famille
 tag: famille
-id: famille
 images:
     - /images/gallery/famille/image1.jpg
     - /images/gallery/famille/image2.jpg

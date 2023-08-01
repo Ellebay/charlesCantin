@@ -1,7 +1,6 @@
 ---
-title: Baptême
+categorie: Baptême
 tag: bapteme
-id: bapteme
 images:
     - /images/gallery/bapteme/image1.jpg
     - /images/gallery/bapteme/image2.jpg
