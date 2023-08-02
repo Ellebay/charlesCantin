@@ -22,7 +22,11 @@ collections:
     fields:
       - { label: "Catégorie", name: "categorie", widget: "string"}
       - { label: "Tag", name: "tag", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", media_library: { config: { multiple: true } } }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image", media_library: { config: { multiple: true } } }
 
   # Creation Tarifs & Prestations (add / modify / delete prestations)
   - label: "Tarifs & Prestations"
