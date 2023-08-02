@@ -28,7 +28,6 @@ collections:
         fields:
           - { label: "Image", name: "image", widget: "image", media_library: { config: { multiple: true } } }
 
-
   # Creation Tarifs & Prestations (add / modify / delete prestations)
   - label: "Tarifs & Prestations"
     name: "tarifs"
