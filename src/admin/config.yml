@@ -11,6 +11,7 @@ local_backend: true
 # publish_mode: editorial_workflow
 
 collections:
+  # Creation galerie (add / modify / delete images & categories)
   - label: "Galerie"
     name: "galerie"
     folder: "src/categories"
@@ -21,14 +22,8 @@ collections:
     fields:
       - { label: "Catégorie", name: "categorie", widget: "string"}
       - { label: "Tag", name: "tag", widget: "string" }
-      - label: "Images"
-        name: "images"
-        widget: "list"
-        fields:
-          - { label: "Image", name: "image", widget: "image", media_library: { config: { multiple: true } } }
-
-  # Add other collections as needed
-
+      - {label: "Images", name: "images", widget: "image",media_library: { config: { multiple: true } }}
+  # Creation Tarifs & Prestations (add / modify / delete prestations)
   - label: "Tarifs & Prestations"
     name: "tarifs"
     folder: "src/prestations"
@@ -40,7 +35,7 @@ collections:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Prix", name: "price", widget: "string"}
-
+  # Creation Paramères (add / modify / delete nav & footer)
   - label: "Paramètres"
     name: "parametres"
     editor:
