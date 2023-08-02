@@ -6,4 +6,5 @@ images:
   - /images/bapteme2.png
   - /images/bapteme3.png
   - /images/bapteme4.png
+  - /images/logo.jpg
 ---
