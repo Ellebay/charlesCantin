@@ -2,8 +2,8 @@
 categorie: Famille
 tag: famille
 images:
-    - /images/gallery/famille1.png
-    - /images/gallery/famille2.png
-    - /images/gallery/famille3.png
-    - /images/gallery/famille4.png
+    - /images/famille1.png
+    - /images/famille2.png
+    - /images/famille3.png
+    - /images/famille4.png
 ---
