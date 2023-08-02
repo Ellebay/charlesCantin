@@ -2,8 +2,8 @@
 categorie: Mariage
 tag: mariage
 images:
-  - /images/gallery/mariage1.png
-  - /images/gallery/mariage2.png
-  - /images/gallery/mariage3.png
-  - /images/gallery/mariage4.png
+  - /images/gallery/mariage/mariage1.png
+  - /images/gallery/mariage/mariage2.png
+  - /images/gallery/mariage/mariage3.png
+  - /images/gallery/mariage/mariage4.png
 ---

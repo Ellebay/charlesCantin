@@ -1,8 +1,21 @@
 <section>
-{#       <div class="grid text-center prestation" style="--bs-columns: 3;"> #}
-      <div class="text-center prestation">
-        {% for prestation in collections.prestations %}
-          {% include "prestation-card.njk" %}
-        {% endfor %}
-      </div>
-</section>
+  <div class="text-center prestation">
+    {% for prestation in collections.prestations %}
+      <article class="prestation-card">
+        <div class="prestation-card__body">
+          <h3 class="prestation-card__title">{{ prestation.data.title }}</h3>
+          <hr class="prestation__dashed">
+            <div class="prestation-card__tags">
+              <span class="prestation-card__tag">{{ prestation.data.price }}</span>
+            </div>
+            <div class="prestation-card__description-container">
+              <p class="prestation-card__description">{{ prestation.data.description }}</p>
+            </div>
+            <div class="prestation-card__button">
+              <a class="prestation-card__button-booking mt-auto" href="/contact" role="button">Réserver</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
