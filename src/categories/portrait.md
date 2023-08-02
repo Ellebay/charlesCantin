@@ -2,8 +2,8 @@
 categorie: Portrait
 tag: portrait
 images:
-    - /images/gallery/portrait/image1.jpg
-    - /images/gallery/portrait/image2.jpg
-    - /images/gallery/portrait/image3.jpg
-    - /images/gallery/portrait/image4.jpg
+    - /images/gallery/portrait1.png
+    - /images/gallery/portrait2.png
+    - /images/gallery/portrait3.png
+    - /images/gallery/portrait4.png
 ---

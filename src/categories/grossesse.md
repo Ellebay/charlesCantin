@@ -2,8 +2,8 @@
 categorie: Grossesse
 tag: grossesse
 images:
-    - /images/gallery/grossesse/image1.jpg
-    - /images/gallery/grossesse/image2.jpg
-    - /images/gallery/grossesse/image3.jpg
-    - /images/gallery/grossesse/image4.jpg
+    - /images/gallery/grossesse1.png
+    - /images/gallery/grossesse2.png
+    - /images/gallery/grossesse3.png
+    - /images/gallery/grossesse4.png
 ---

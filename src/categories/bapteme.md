@@ -2,8 +2,8 @@
 categorie: Baptème
 tag: bapteme
 images:
-  - /images/gallery/bapteme/image1.jpg
-  - /images/gallery/bapteme/image2.jpg
-  - /images/gallery/bapteme/image3.jpg
-  - /images/gallery/bapteme/image4.jpg
+  - /images/gallery/bapteme1.png
+  - /images/gallery/bapteme2.png
+  - /images/gallery/bapteme3.png
+  - /images/gallery/bapteme4.png
 ---

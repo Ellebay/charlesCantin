@@ -2,8 +2,8 @@
 categorie: Couple
 tag: couple
 images:
-    - /images/gallery/couple/image1.jpg
-    - /images/gallery/couple/image2.jpg
-    - /images/gallery/couple/image3.jpg
-    - /images/gallery/couple/image4.jpg
+    - /images/gallery/couple1.png
+    - /images/gallery/couple2.png
+    - /images/gallery/couple3.png
+    - /images/gallery/couple4.png
 ---
